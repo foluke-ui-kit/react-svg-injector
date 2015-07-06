@@ -1,8 +1,8 @@
 {
-  "name": "ChangePackageName",
-  "version": "0.4.1",
-  "description": "Start react development here...",
-  "main": "app/main.js",
+  "name": "@shawnsandy/react-svg-injector",
+  "version": "0.0.1",
+  "description": "A simple toolkit for loading SVG Icons in your projects",
+  "main": "app/index.js",
   "scripts": {
     "postinstall": "bower install",
     "preinstall": "npm -v && bower -v",
@@ -43,6 +43,7 @@
     "object-assign": "^2.0.0",
     "react": "^0.13.3",
     "style-loader": "^0.12.3",
+    "svg-injector": "^1.1.3",
     "url-loader": "^0.5.6",
     "watchify": "^3.2.1",
     "webpack": "^1.9.10"
