@@ -1,6 +1,6 @@
 {
   "name": "@shawnsandy/react-svg-injector",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A simple toolkit for loading SVG Icons in your projects",
   "main": "app/index.js",
   "scripts": {
