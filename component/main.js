@@ -1,6 +1,42 @@
 webpackJsonp([0],{
 
 /***/ 0:
+/*!*******************************!*\
+  !*** ./public/components.jsx ***!
+  \*******************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Created by shawnsandy on 6/4/15.
+	 */
+	
+	//var React = require("react");
+	//var $ = require('jquery');
+	
+	/**
+	 * webpack compiled components sample file
+	 */
+	
+	// import the component
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _srcLibsReactSvgInjectorJsx = __webpack_require__(/*! ../src/libs/react-svg-injector.jsx */ 157);
+	
+	var _srcLibsReactSvgInjectorJsx2 = _interopRequireDefault(_srcLibsReactSvgInjectorJsx);
+	
+	//var Sample = require('../src/libs/samples.jsx');
+	// render the main component
+	_react2['default'].render(_react2['default'].createElement(_srcLibsReactSvgInjectorJsx2['default'], null), document.getElementById('component'));
+
+/***/ },
+
+/***/ 157:
 /*!*****************************************!*\
   !*** ./src/libs/react-svg-injector.jsx ***!
   \*****************************************/
@@ -34,7 +70,7 @@ webpackJsonp([0],{
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _svgInjector = __webpack_require__(/*! svg-injector */ 157);
+	var _svgInjector = __webpack_require__(/*! svg-injector */ 158);
 	
 	var _svgInjector2 = _interopRequireDefault(_svgInjector);
 	
@@ -90,7 +126,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 157:
+/***/ 158:
 /*!****************************************!*\
   !*** ./~/svg-injector/svg-injector.js ***!
   \****************************************/
@@ -565,4 +601,4 @@ webpackJsonp([0],{
 /***/ }
 
 });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=main.js.map

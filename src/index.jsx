@@ -5,4 +5,6 @@
  */
 
 import React from 'react';
-import ReactSvg from './libs/react-svg-injector.jsx';
+import SvgIcon from './libs/react-svg-injector.jsx';
+
+React.render(<SvgIcon />, document.getElementById('component'));

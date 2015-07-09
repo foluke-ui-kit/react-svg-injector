@@ -7,31 +7,17 @@
  * @type {*|exports}
  */
 import React from 'react'
+import Inject from 'svg-injector'
 
 
-var SVGIcons = React.createClass({
+export default class SvgIcon extends React.Component {
 
-    displayName: "SvgIcon",
+    constructor(props) {
+        super(props)
+    }
 
-    propTypes: {
-        size: React.PropTypes.string.isRequired,
-        iconSrc: React.PropTypes.string.isRequired,
-        classs: React.PropTypes.string
-    },
-    getDefaultProps: function (){
 
-        return {
-            size: '48px',
-            fill: 'blue',
-            iconSrc: 'flashlight.svg',
-            pngSrc: 'default.png',
-            classname: 'svg'
-
-        }
-
-    },
-
-    componentDidMount: function() {
+    componentDidMount() {
 
         // Elements to inject
         var mySVGsToInject = React.findDOMNode(this.refs.inject);
@@ -42,18 +28,27 @@ var SVGIcons = React.createClass({
         // Do the injection
         Inject(mySVGsToInject, options);
 
-    },
+    }
 
-    render: function () {
+    render() {
 
 
         return (
         <img ref="inject" className={this.props.classname} src={this.props.iconSrc} data-fallback={this.props.pngSrc} />
         );
     }
-  });
+  }
 
-/**
- * export the element
- */
-export default SVGIcons;
+SvgIcon.PropTypes = {
+    size: React.PropTypes.string.isRequired,
+    iconSrc: React.PropTypes.string.isRequired,
+    classs: React.PropTypes.string
+
+}
+SvgIcon.defaultProps = {
+    size: '48px',
+    fill: 'blue',
+    iconSrc: 'svg/flashlight.svg',
+    pngSrc: 'default.png',
+    classname: 'svg'
+}

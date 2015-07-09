@@ -6,12 +6,14 @@
   "scripts": {
     "postinstall": "bower install",
     "preinstall": "npm -v && bower -v",
-    "preversion": "npm run build",
+    "preversion": "npm run build && npm run build-html",
     "postversion": "git push --tags && npm run git-push",
     "development": "webpack -d --watch & browser-sync start --config bs-config.js ",
+    "html-development": "webpack -d --watch --config html.webpack.config.js & browser-sync start --config bs-config.js ",
     "git-commit": "git add -A . && git commit -a -m 'Release package'",
     "git-push": "git push origin develop",
     "build": "rm -r app/* && webpack -p --progress --colors",
+    "build-html": "webpack -p --progress --colors --config html.webpack.config.js",
     "release": "npm run build && npm run git-commit && npm run version:patch",
     "version:patch": "npm version patch && git push --tags",
     "liveview": "browser-sync start --config bs-config.js",
@@ -19,17 +21,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/foluke-ui-kit/start-react.git"
+    "url": "https://github.com/foluke-ui-kit/svg-icons-kit.git"
   },
   "keywords": [
-    "react"
+    "react-components"
   ],
   "author": "shawn sandy",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/foluke-ui-kit/start-react/issues"
+    "url": "https://github.com/foluke-ui-kit/svg-icons-kit/issues"
   },
-  "homepage": "https://github.com/foluke-ui-kit/start-react",
+  "homepage": "https://github.com/foluke-ui-kit/svg-icons-kit",
   "devDependencies": {
     "babel-core": "^5.6.15",
     "babel-loader": "^5.2.2",
