@@ -1,21 +1,21 @@
 /**
- * Created by shawnsandy on 3/19/15.
+ * Created by shawnsandy on 7/7/15.
  */
 
 var webpack = require('webpack');
 
 var commonsPlugin = new webpack.optimize.CommonsChunkPlugin({
-    filename: 'libs.js',
+    filename: 'html-component.js',
     minChunks: 2
 });
 
 module.exports = {
     entry: {
-        index: './src/libs/react-svg-injector.jsx',
+        main: './public/components.jsx',
         vendor: ['react']
     },
     output: {
-        path: './app/',
+        path: './component/',
         filename: '[name].js',
         publicPath: './src/libs/'
     },
